@@ -30,7 +30,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 url=$1
-targetDir=$2
+
+if [$# -e 2]; then
+   targetDir=$2
+else
+   targetDir=$1
+fi
 
 # global curl options
 # to disable progress bar, replace with -s
@@ -39,7 +44,7 @@ curlOptions='--progress-bar'
 userAgent='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
 
 # check usage
-if [ $# -ne 2 ]; then
+if [ $# -lt 1 ]; then
   echo "Usage: tumbdl [URL] [DIR]"
   echo ""
   echo "URL: URL of tumblelog, e.g. prostbote.tumblr.com"
