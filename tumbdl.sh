@@ -48,7 +48,8 @@ if [ $# -lt 1 ]; then
   echo "Usage: tumbdl URL ([DIR])"
   echo ""
   echo "URL: URL of tumblelog, e.g. prostbote.tumblr.com"
-  echo "DIR: directory to put images in, e.g. prostbote"
+  echo "DIR: directory to put images in, e.g. prostbote. If none is given, the script"
+  echo "     will create one identical to the URL."
   exit
 fi
 
