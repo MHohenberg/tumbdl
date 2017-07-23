@@ -30,12 +30,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 url=$1
+targetDir=$1
 
-if [$# -e 2]; then
+
+if [ $# -gt 1 ]; then
    targetDir=$2
-else
-   targetDir=$1
 fi
+
+echo "outputing to $targetDir"
 
 # global curl options
 # to disable progress bar, replace with -s
