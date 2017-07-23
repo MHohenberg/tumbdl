@@ -45,7 +45,7 @@ userAgent='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/4
 
 # check usage
 if [ $# -lt 1 ]; then
-  echo "Usage: tumbdl [URL] [DIR]"
+  echo "Usage: tumbdl URL ([DIR])"
   echo ""
   echo "URL: URL of tumblelog, e.g. prostbote.tumblr.com"
   echo "DIR: directory to put images in, e.g. prostbote"
